@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="container">
+        <!-- <div class="mynav">
+          <img class="mynav-prev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEGklEQVRo3uVaX0hTURz+7XgfpoJusDEGthklzlq3h6YNCnT5Ik4YRMKKAhFD6knLQjQwHzILUZ+MUUgglA8hGCq+6BKSlu2hhqYikluCyAabC+d9mN0ersx5vfPPdu7dvfY9bHD/ft/5fef8zj3nJ6NpGlJGdJt2LwV8/s1x9+q8b2PWG9x/jVGvLNLlVpjydOpsU4GKyJABDshSERChogOTy6Mzq07P2nHvtZBaa0nenWtnsuREGgS4Fvwdg54keHMqabGTZoNaIAGuBX+jY4bTJKnAqFf21JckIeMYAgJhqrZ7GkurHxCN/gdXVDly/AIcY4tNb76BIOiqK66vLMQmIEJF7Z1TvDY8ZygGm0uP0r8PERAIU+aG0fXQFggOjSLT1Ws91E7ogHNz3lC62APAemjL3DA65w0lGYE5b8jcOAIigKun6rxecbwIBMKUrX0CxAFb+0QgTB0jAhEqSt4fTpdzEvUHT5+Ns09zRMDeOSUq9kx/sHdOHclCjrFFgUfMI8LpWXOMLR5ioUCYOl3zAUSMX29vsAbWPRGo7Z4GcWM/QxQ/SxOneVhGci34uQU0OmZACmDxRLHmxz5D5gmz3mB8EHYEdAx6QDqIZ4uYzCV+97N6QoSK7goYmFzm9X0ZSNZcfeHP0O0v3VZcz4xxRgAwOrPKH/tzOsXi6+utNy8CgDFfmfS3Lwsxzii6TfPknwwke1lr+tpbpVFmxg6eUmfjclF0mwYAwr0U4KnhP7aVx1PHDvdSwGxQI59/U4CG5wMMczTuXsXu+HtVBgHGIoY5Me/bwNXwz2suCUOdAcOcwJKABXA8Z0oGAEJyDc9CqgI+d1Ua85VpzMoolZt16uz0sk9VgM+/ObsSlLAAALjaNPZqZEHCArb/0o/73ZcbRtaD6VnIQEY9BhP/9IUK7w4JHAqGOSrS5WJ5nPChYJijClMexocKGQqGOdJhmt8KHwqGOTIVqPh4ugChYJgjIkNmIbV8vIAzFL8xzd4tpJbZaUYAYC3J46+dmFA8e/8DAGZXgqxlqaQR4yyjaTpCRTW3BkFSWH9nZ1bbEQBkyQmeXMQTLKQ2tlewk4lb7KSEBMSz3RFgNqixpGRhEnD82szuXKinvkQSAlg8dwWYDWrx9wQLqWUtjZ2sHRpVjryrrli07Lvqivdv3LO/B+orC8VpJAup5awAOYn7xFlywtVr1SgyxcPe1WtNVLnC/UmpypEPt5WLRMBwW/kBNSsJv4nP6xWunqr0xkGjyDy40gNOeL0Q4yVPn034cclCaj19tqMUz/0HNXPxdpJw1WIMEq4bZcmQauUuK2dLtXaahTRWr8ewsTdblCW47NPO/1Pm11aWH2l1OqsBFC+eOJ3VAN8fPnI6q9m3hUr3/ic6zj5/toz7+C7+AV3+JtoAlQh6AAAAAElFTkSuQmCC">
+          <img class="mynav-next" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEFElEQVRo3uVaXUhTYRh+93kupoFusCED24wKtdbpZsqiQJc34qRBlKwoEDHErlS86OeivCgkxJ8bYxQhCOVFCEJKN2ZC0snsoqE5kagtQWSDzUXzXMxOF5+cHY9n/u07Z+fYc7Gxc84+nud93u/vfK+O4zjIGMkNbnYpEgr/eTu7vBBamwtGtz9jtxnLrAU1jiKr+YjjpInK0QEJ6DIRkGCTQ+++j80sT/pX9vtfF21xVxTdvHg8T09lQQATCD8e9h+At6SSe17aWWpWSAATCLf5ZiSTJBPYbcbe5ooDyNiHgEicbeyZJhL1Hdx40X7elK8nL8A3vtjx/DMogu6m8ubaEmICEmzS2zUla+AlrRi+U7mX/r2LgEicdbaOrcbWQXEUGnKZPveu6YR2uDcfjGWLPQCsxtadrWPzwdgBHZgPxpxtb0AFYHrrTtsM+3MgEmc9nROgDng6JyJxdh8OJNgkfXs0W5mTrj/4BzySfVrCAW/XlKrY4/7g7ZraUwr5xhcVHjH3iEn/im98cZcUisTZYw2vQcX4MXhFNLBucaCxZxrUje0MkXCVps7kESUSEwhLC2jzzYAWIOKJ+PATXyHLhLlgVGjCpoDHw37QDoRsEZ651J/9op6QYJMpAUPvvpNq+mOP+/fIjTtXz+QgnawaeM4IAMZmlok06iw124uNAHD/2tnFZ5dPWQ3yCeA5o+QGRyp/jpqPpFYvxtxPfXVPGh0yWTHpX0lucACAZpci8sWppa5UPiswcxQK/5F3ISmbFZg5eju7rMC4IYcVmDlaCK0ptKYnbQVmjhSegAlagZmjLGyviFqRBQG8FR+6azUsAADsxUarYOrQnoC5n9HMB/GsCXj6JnChYzzzdijlqa9G1y91TnwLxYi0huw2o8KBL7k1QoQ9Zk6VWQuUmQrIBh4AyqwFAIBqHEXaCjwPzJzKfCBTOPA8MHPKcdIka+DvDn7Z+MvJ0ThmTlE5OhdtIbKn+SUY1OULPIaLtuCTZgQA7goy3YAJhOd+RgHg0auvxDNeBJ6zjuO4BJssvD4MmsLqSy9+244AIE9PuWiLhti7aAt/VrC5lLjnpTUkQMgWpd6IKDslZzIBCw/0U4u53uYKTQgQ8UwJcJaa1d8TXLRFVE9xuE5oTPn67qZy1bLvbirffnAv3tA015aoM5FctEWyAuQwnhPn6Smmz11oyFUPe6bPna5yRXpPbMrXjz6oVomA0QfVO9SspN3Un7YZmN667PpQaMjdudIDDnm9EM4l/4BH+XHJRVv8A569FM/9BzVzwnTScNWicNul1bpRkQytVu6K5myt1k6LkMXqdR5rW2eLqjSPvd/8fog/PVXF39r6K+sBGlra+yvrAYrP4d9bEavc+p3uuvj+iSrp6yn8A+B+Jfzt4SHzAAAAAElFTkSuQmCC">
+        </div> -->
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card-block">
+                <section class="card">
+                    <div class="card-inner">
+                        <div class="single-card">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="hero-slider-image">
+                                        <img src="image/Stephanie_Desktop.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="bizee-made-starting-main">
+                                        <div class="bizee-made-starting">
+                                            <div class="logo-hero-img">
+                                                <img src="image/Stephanie_Logo.png" alt="">
+                                            </div>
+                                            <p>Bizee made starting my real estate brokerage a breeze. They registered my LLC, helped open a bank account, and connected me to a tax pro without ever leaving my house. It's THE solution for people like me who need to get business done before the kids get home from school.</p>
+                                        </div>
+                                       <div class="row">
+                                        <div class="stephanie">
+                                            <div class="col-md-6">
+                                                <h3>Stephanie</h3>
+                                                <span>Owner of Next Door Realty <br> Austin, TX</span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="star">
+                                                    <div class="star-1">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-2">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-3">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-4">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-5">
+                                                      
+                                                        <svg fill="#fff705" width="19px" height="19px" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <title>half-star-solid</title> <path class="clr-i-solid clr-i-solid-path-1" d="M34,16.78a2.22,2.22,0,0,0-1.29-4l-9-.34a.23.23,0,0,1-.2-.15L20.4,3.89a2.22,2.22,0,0,0-4.17,0l-3.1,8.43a.23.23,0,0,1-.2.15l-9,.34a2.22,2.22,0,0,0-1.29,4l7.06,5.55a.23.23,0,0,1,.08.24L7.35,31.21a2.22,2.22,0,0,0,3.38,2.45l7.46-5a.22.22,0,0,1,.25,0l7.46,5a2.2,2.2,0,0,0,2.55,0,2.2,2.2,0,0,0,.83-2.4l-2.45-8.64a.22.22,0,0,1,.08-.24ZM24.9,23.11l2.45,8.64A.22.22,0,0,1,27,32l-7.46-5a2.21,2.21,0,0,0-1.24-.38h0V4.44h0a.2.2,0,0,1,.21.15L21.62,13a2.22,2.22,0,0,0,2,1.46l9,.34a.22.22,0,0,1,.13.4l-7.06,5.55A2.21,2.21,0,0,0,24.9,23.11Z"/> <rect x="0" y="0" width="36" height="36" fill-opacity="0"/> </g> </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="mynav">
+                                                    <img class="mynav-prev" src="image/Left Arrow.png">
+                                                    <img class="mynav-next" src="image/Right Arrow.png">
+                                                    <!--<button>&#60;</button>
+                                                            <button>&#62;</button>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-block">
+                <section class="card">
+                    <div class="card-inner">
+                        <div class="single-card">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="hero-slider-image">
+                                        <img src="image/Chad - Desktop.webp" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="bizee-made-starting-main">
+                                        <div class="bizee-made-starting">
+                                            <div class="logo-hero-img">
+                                                <img src="image/chad-logo 2.webp" alt="">
+                                            </div>
+                                            <p>Bizee's team of experts took care of filing my paperwork so I could get back behind the camera. For an LLC like mine, this is the modern way to get your business started and keep things on track as it grows.</p>
+                                        </div>
+                                       <div class="row">
+                                        <div class="stephanie">
+                                            <div class="col-md-6">
+                                                <h3>Chad</h3>
+                                                <span>Owner of Chad Martel Photography <br> Jacksonville, FL</span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="star">
+                                                    <div class="star-1">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-2">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-3">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-4">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-5">
+                                                      
+                                                        <svg fill="#fff705" width="19px" height="19px" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <title>half-star-solid</title> <path class="clr-i-solid clr-i-solid-path-1" d="M34,16.78a2.22,2.22,0,0,0-1.29-4l-9-.34a.23.23,0,0,1-.2-.15L20.4,3.89a2.22,2.22,0,0,0-4.17,0l-3.1,8.43a.23.23,0,0,1-.2.15l-9,.34a2.22,2.22,0,0,0-1.29,4l7.06,5.55a.23.23,0,0,1,.08.24L7.35,31.21a2.22,2.22,0,0,0,3.38,2.45l7.46-5a.22.22,0,0,1,.25,0l7.46,5a2.2,2.2,0,0,0,2.55,0,2.2,2.2,0,0,0,.83-2.4l-2.45-8.64a.22.22,0,0,1,.08-.24ZM24.9,23.11l2.45,8.64A.22.22,0,0,1,27,32l-7.46-5a2.21,2.21,0,0,0-1.24-.38h0V4.44h0a.2.2,0,0,1,.21.15L21.62,13a2.22,2.22,0,0,0,2,1.46l9,.34a.22.22,0,0,1,.13.4l-7.06,5.55A2.21,2.21,0,0,0,24.9,23.11Z"/> <rect x="0" y="0" width="36" height="36" fill-opacity="0"/> </g> </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="mynav">
+                                                    <img class="mynav-prev" src="image/Left Arrow.png">
+                                                    <img class="mynav-next" src="image/Right Arrow.png">
+                                                    <!--<button>&#60;</button>
+                                                            <button>&#62;</button>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-block">
+                <section class="card">
+                    <div class="card-inner">
+                        <div class="single-card">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="hero-slider-image">
+                                        <img src="image/Isabel - Desktop.webp" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="bizee-made-starting-main">
+                                        <div class="bizee-made-starting">
+                                            <div class="logo-hero-img">
+                                                <img src="image/Isa Logo.webp" alt="">
+                                            </div>
+                                            <p>My parents always said, “... and a glass of scotch in the other.” With Bizee, I get to be the CEO MY way. With their expert help, I’m a confident business owner and feel in command when it comes to the parts of entrepreneurship I’ve never navigated before.</p>
+                                        </div>
+                                       <div class="row">
+                                        <div class="stephanie">
+                                            <div class="col-md-6">
+                                                <h3>Isabel</h3>
+                                                <span>Founder of Isa Paints <br> San Mateo, CA</span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="star">
+                                                    <div class="star-1">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-2">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-3">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-4">
+                                                      <svg fill="#fff705" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"/> </g>
+                                                        
+                                                        </svg>
+                                                    </div>
+                                                    <div class="star-5">
+                                                      
+                                                        <svg fill="#fff705" width="19px" height="19px" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                        
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        
+                                                        <g id="SVGRepo_iconCarrier"> <title>half-star-solid</title> <path class="clr-i-solid clr-i-solid-path-1" d="M34,16.78a2.22,2.22,0,0,0-1.29-4l-9-.34a.23.23,0,0,1-.2-.15L20.4,3.89a2.22,2.22,0,0,0-4.17,0l-3.1,8.43a.23.23,0,0,1-.2.15l-9,.34a2.22,2.22,0,0,0-1.29,4l7.06,5.55a.23.23,0,0,1,.08.24L7.35,31.21a2.22,2.22,0,0,0,3.38,2.45l7.46-5a.22.22,0,0,1,.25,0l7.46,5a2.2,2.2,0,0,0,2.55,0,2.2,2.2,0,0,0,.83-2.4l-2.45-8.64a.22.22,0,0,1,.08-.24ZM24.9,23.11l2.45,8.64A.22.22,0,0,1,27,32l-7.46-5a2.21,2.21,0,0,0-1.24-.38h0V4.44h0a.2.2,0,0,1,.21.15L21.62,13a2.22,2.22,0,0,0,2,1.46l9,.34a.22.22,0,0,1,.13.4l-7.06,5.55A2.21,2.21,0,0,0,24.9,23.11Z"/> <rect x="0" y="0" width="36" height="36" fill-opacity="0"/> </g> </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="mynav">
+                                                    <img class="mynav-prev" src="image/Left Arrow.png">
+                                                    <img class="mynav-next" src="image/Right Arrow.png">
+                                                    <!--<button>&#60;</button>
+                                                            <button>&#62;</button>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
