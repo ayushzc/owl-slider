@@ -117,3 +117,9 @@
   width: 134px;
   object-fit: cover;
 }
+
+
+.mynav-next, .mynav-prev{
+    height: 50px!important;
+    width: 50px!important;
+}
